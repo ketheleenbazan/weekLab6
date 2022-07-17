@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- css page -->
+  <link rel="stylesheet" href="styles.css">
+    <!-- javascript -->
+
+  <title>Week 6 LabWork</title>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+<!-- fixed navbar bootstrap -->
+</head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="page2.html">Contact Us</a>
+              </li>
+            </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="p-5 rounded">
+        <h1>JAVASCRIPT</h1>
+      </div>
+    </main>
+
+    <div class="container-marketing">
+      <img class="javascript" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" alt="JS">
+    </div>
+    <p class="lead">Here you can see some JavaScript content</p>
+
+    <!-- 3 containers -->
+    <div class="container p-3 my-3 border">
+      <h1>My 1st example of JavaScript code</h1>
+      <p>The button bellow when clicked it shows up a prompt asking the user's name and display the answer also as a prompt.</p>
+
+      <!-- JavaScript -->
+      <script>
+        function askName(promptMsg){
+        	visitorName = prompt(promptMsg, '');
+        	alert("Hello, " + visitorName + "!");
+        }
+      </script>
+        <form>
+          <input class="btn1" type="button" onclick="askName('What is your name?');" value="Click me!" />
+        </form>
+    </div>
+
+      <div class="container p-3 my-3 bg-dark text-white">
+        <h1>My 2nd example of JavaScript code</h1>
+        <p>The button below asks the user to insert a number between 1-10.</p>
+
+        <script>
+          function askNum(promptMsg){
+            var num;
+  			    num = parseInt(prompt("Enter a number between 1 and 10"));
+
+            if((num => 1) && (num <= 5)){
+              alert("You entered a number between 1 and 5");
+            } else if ((num => 6) && (num <= 10)){
+              alert("You entered a number between 6 and 10");
+            } else {
+              alert("You did not enter a number between 1-10");
+            }
+          }
+        </script>
+        <form>
+          <input class="btn1" type="button" onclick="askNum('');" value="Click me!" />
+        </form>
+      </div>
+
+      <div class="container p-3 my-3 bg-danger text-white">
+        <h1>My 3rd example of JavaScript code</h1>
+        <p>The button below will ask the user's name, age and email address and it will display the message right on the page.</p>
+
+        <script>
+          function askDetail(promptMsg){
+            var fName = prompt("Enter your name");
+            var age = parseInt(prompt("Enter your age"));
+            var email = prompt("Enter your email address");
+
+            document.getElementById("result").innerHTML = "Hi, your name is " + fName + ", you are " + age + " years old " + " and your email address for contact is " + email;
+          }
+        </script>
+        <form>
+          <input class="btn1" type="button" onclick="askDetail('');" value="Click me!" />
+        </form>
+
+        <h4 id="result"></h4>
+
+      </div>
+    </div>
+  </body>
+</html>
